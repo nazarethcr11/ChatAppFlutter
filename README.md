@@ -1,10 +1,45 @@
-# chat_app
+# Chat App (Flutter and Firebase)
 
-A new Flutter project.
+## Descripción del Proyecto
+Este proyecto es una aplicación que proporciona una plataforma de comunicación con las siguientes funcionalidades clave:
+
+### **Themes**
+La aplicación soporta dos temas visuales para mejorar la experiencia del usuario:
+  - Modo Claro: Un tema con colores brillantes y claros, ideal para ambientes bien iluminados.
+  - Modo Oscuro: Un tema con colores oscuros, diseñado para ambientes con poca luz o para usuarios que prefieren interfaces con menos brillo.
+### **Autenticación**
+La seguridad y privacidad de los usuarios son primordiales. La aplicación incluye las siguientes opciones de autenticación:
+
+- Inicio de sesión con correo electrónico: Permite a los usuarios ingresar con su dirección de correo electrónico y contraseña.
+- Registro con correo electrónico: Los nuevos usuarios pueden crear una cuenta proporcionando un correo electrónico y una contraseña.
+### **Funcionalidad de Chat**
+Para facilitar la comunicación, la aplicación incluye funcionalidades de chat en tiempo real:
+
+- Enviar mensajes: Los usuarios pueden enviar mensajes instantáneamente a otros usuarios en la plataforma.
+- Recibir mensajes: Los usuarios reciben mensajes de otros usuarios en tiempo real.
+### **Cuenta de Usuario**
+La aplicación ofrece varias herramientas para gestionar y personalizar la experiencia del usuario:
+
+- Bloquear y reportar usuarios: Los usuarios pueden bloquear o reportar a otros usuarios en caso de comportamientos inapropiados.
+- Eliminar cuenta: Los usuarios tienen la opción de eliminar su cuenta de forma permanente si así lo desean.
+### **Mejoras Futuras**
+Para mejorar la funcionalidad y experiencia del usuario, se están considerando las siguientes características:
+
+- Notificaciones: Implementar notificaciones push para alertar a los usuarios sobre nuevos mensajes o eventos importantes.
+- Estado de mensajes no leídos: Mostrar el estado de los mensajes no leídos para mantener a los usuarios informados sobre la actividad en sus chats.
+
 
 ## Getting Started
+### **Video tutorial**
+  - Para una guía visual detallada de los pasos de configuración del proyecto, consulta el siguiente video: https://youtu.be/KGpmUqhtrkI?si=f9V8Svmyrh2mpDSY
 
-Configuración de Firebase
+### **Obtencion de Dependencias**
+```
+  flutter pub get
+```
+
+### **Configuración de Firebase**
+
 Para utilizar Firebase en este proyecto, es necesario configurar Firebase siguiendo estos pasos:
 
 1. Crear un proyecto de Firebase
@@ -25,10 +60,11 @@ Para utilizar Firebase en este proyecto, es necesario configurar Firebase siguie
   ```
   flutterfire configure
   ```
-  Durante la configuración:
-    - Elige el proyecto que creaste en Firebase.
-    - Selecciona Android como plataforma.
-    - Para el package name, utiliza el namespace de tu aplicación.
+  > [!NOTE]
+  > Durante la configuración:
+  > - Elige el proyecto que creaste en Firebase.
+  > - Selecciona Android como plataforma.
+  > - Para el package name, utiliza el namespace de tu aplicación.
     
 3. Configurar Authentication en Firebase
   - 3.1. En el panel de control de Firebase, navega a Authentication.
@@ -38,9 +74,5 @@ Para utilizar Firebase en este proyecto, es necesario configurar Firebase siguie
   - 4.1. En el panel de control de Firebase, navega a Cloud Firestore.
   - 4.2. Haz clic en "Crear base de datos" y selecciona el modo de producción o prueba según tus necesidades.
   - 4.3. Cambia las reglas de Firestore para permitir el acceso de lectura y escritura (solo para desarrollo): Cambia las reglas false a true para pruebas iniciales.
-  > [!NOTE]
+  > [!TIP]
   > No olvides configurar reglas más estrictas para producción.
-
-5. Video tutorial
-  - Para una guía visual detallada de estos pasos, consulta el siguiente video: Configuración de Firebase.
-  https://youtu.be/KGpmUqhtrkI?si=f9V8Svmyrh2mpDSY
