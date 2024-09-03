@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 class MyTextfield extends StatelessWidget {
   final String hintText;
   final bool obscureText;
+  final bool labelText;
   final TextEditingController controller;
   final FocusNode? focusNode;
-  const MyTextfield({super.key, required this.hintText, required this.obscureText, required this.controller, this.focusNode});
+  const MyTextfield({super.key, required this.hintText, required this.obscureText, required this.controller, this.focusNode, this.labelText = false});
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +20,10 @@ class MyTextfield extends StatelessWidget {
         focusNode: focusNode,
         controller: controller,
         decoration: InputDecoration(
+          labelText: labelText ? hintText : null,
+          labelStyle: TextStyle(
+            color: Theme.of(context).colorScheme.primary,
+          ),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(10),
             borderSide: BorderSide(

@@ -4,10 +4,11 @@ import 'package:flutter/material.dart';
 import '../pages/settings_page.dart';
 
 class MyDrawer extends StatelessWidget {
-  const MyDrawer({Key? key}) : super(key: key);
+  MyDrawer({Key? key}) : super(key: key);
+
+  final authService  = AuthService();
+
   void signOut(BuildContext context) async{
-    //auth service
-    final authService  = AuthService();
     //try to sign out
     try{
       await authService.signOut();
@@ -35,11 +36,18 @@ class MyDrawer extends StatelessWidget {
             children:[
               //drawer header
               DrawerHeader(
+                padding: EdgeInsets.only(bottom: 0.0, top: 30.0),
                 child: Center(
-                  child:Icon(
-                    Icons.mark_unread_chat_alt_rounded,
-                    size: 60,
-                    color: Theme.of(context).colorScheme.primary,
+                  child:Column(
+                    children: [
+                      Icon(
+                        Icons.near_me_outlined,
+                        size: 60,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                      SizedBox(height: 25),
+                      Text( authService.getCurrentUser()!.email.toString(),style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary,fontSize: 14)),
+                    ],
                   ),
                 ),
               ),
@@ -47,8 +55,8 @@ class MyDrawer extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 20.0),
                 child: ListTile(
-                  title: Text("H O M E", style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary)),
-                  leading:  Icon(Icons.home,color: Theme.of(context).colorScheme.primary),
+                  title: Text("Home", style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary)),
+                  leading:  Icon(Icons.home_outlined,color: Theme.of(context).colorScheme.primary),
                   onTap: () {
                     Navigator.pop(context);
                   },
@@ -58,8 +66,8 @@ class MyDrawer extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 20.0),
                 child: ListTile(
-                  title: Text("S E T T I N G S", style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary)),
-                  leading:  Icon(Icons.settings,color: Theme.of(context).colorScheme.primary),
+                  title: Text("Settings", style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary)),
+                  leading:  Icon(Icons.settings_outlined,color: Theme.of(context).colorScheme.primary),
                   onTap: () {
                     Navigator.pop(context);
                     Navigator.push(context, MaterialPageRoute(builder: (context)=>SettingsPage()));
@@ -72,8 +80,8 @@ class MyDrawer extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20.0,bottom: 20.0),
             child: ListTile(
-              title: Text("L O G O U T", style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary)),
-              leading: Icon(Icons.logout,color: Theme.of(context).colorScheme.primary),
+              title: Text("Logout", style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary)),
+              leading: Icon(Icons.logout_outlined,color: Theme.of(context).colorScheme.primary),
               onTap: ()=>signOut(context),
             ),
           ),

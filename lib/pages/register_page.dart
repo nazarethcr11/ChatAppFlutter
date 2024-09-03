@@ -1,3 +1,4 @@
+import 'package:chat_app/components/my_textfield_show.dart';
 import 'package:chat_app/services/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 
@@ -51,7 +52,7 @@ class RegisterPage extends StatelessWidget {
           children:[
             //logo
             Icon(
-                Icons.mark_unread_chat_alt_rounded,
+                Icons.near_me_outlined,
                 size: 60,
                 color: Theme.of(context).colorScheme.primary
             ),
@@ -70,19 +71,18 @@ class RegisterPage extends StatelessWidget {
               hintText: "Email",
               obscureText: false,
               controller: emailController,
+              labelText: true,
             ),
             const SizedBox(height: 10),
             //password textfield
-            MyTextfield(
+            MyTextfieldShow(
                 controller: passwordController,
-                obscureText: true,
                 hintText: "Password"
             ),
             const SizedBox(height: 10),
             //confirm password textfield
-            MyTextfield(
+            MyTextfieldShow(
                 controller: confirmPasswordController,
-                obscureText: true,
                 hintText: "Confirm Password"
             ),
             const SizedBox(height: 20),

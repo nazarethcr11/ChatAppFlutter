@@ -4,6 +4,8 @@ import 'package:chat_app/services/auth/auth_service.dart';
 
 import 'package:flutter/material.dart';
 
+import '../components/my_textfield_show.dart';
+
 
 class LoginPage extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
@@ -46,7 +48,7 @@ class LoginPage extends StatelessWidget {
           children:[
             //logo
             Icon(
-                Icons.mark_unread_chat_alt_rounded,
+                Icons.near_me_outlined,
                 size: 60,
                 color: Theme.of(context).colorScheme.primary
             ),
@@ -65,12 +67,12 @@ class LoginPage extends StatelessWidget {
                 hintText: "Email",
                 obscureText: false,
               controller: emailController,
+              labelText: true,
             ),
             const SizedBox(height: 10),
             //password textfield
-            MyTextfield(
+            MyTextfieldShow(
               controller: passwordController,
-              obscureText: true,
                 hintText: "Password"
             ),
             const SizedBox(height: 20),
