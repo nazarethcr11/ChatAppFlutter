@@ -28,8 +28,8 @@ class ChatBubble extends StatelessWidget {
                 children:[
                   //report message button
                   ListTile(
-                    leading: Icon(Icons.flag),
-                    title: Text('Report'),
+                    leading: Icon(Icons.flag, color: Theme.of(context).colorScheme.primary),
+                    title: Text('Report', style: TextStyle(color: Theme.of(context).colorScheme.primary)),
                     onTap: () {
                       Navigator.pop(context);
                       _reportMessage(context,messageId,userId);
@@ -37,8 +37,8 @@ class ChatBubble extends StatelessWidget {
                   ),
                   //block user button
                   ListTile(
-                    leading: Icon(Icons.block),
-                    title: Text('Block User'),
+                    leading: Icon(Icons.block, color: Theme.of(context).colorScheme.error),
+                    title: Text('Block User', style: TextStyle(color: Theme.of(context).colorScheme.error)),
                     onTap: () {
                       Navigator.pop(context);
                       _blockUser(context,userId);
@@ -46,8 +46,8 @@ class ChatBubble extends StatelessWidget {
                   ),
                   //cancel button
                   ListTile(
-                    leading: Icon(Icons.cancel),
-                    title: Text('Cancel'),
+                    leading: Icon(Icons.cancel, color: Theme.of(context).colorScheme.primary),
+                    title: Text('Cancel', style: TextStyle(color: Theme.of(context).colorScheme.primary)),
                     onTap: () {
                       Navigator.pop(context);
                     },
@@ -63,8 +63,8 @@ class ChatBubble extends StatelessWidget {
     showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: Text('Report Content'),
-          content: Text('Are you sure you want to report this message?'),
+          title: Text('Report Content', style: TextStyle(color: Theme.of(context).colorScheme.primary)),
+          content: Text('Are you sure you want to report this message?', style: TextStyle(color: Theme.of(context).colorScheme.primary)),
           actions: [
             TextButton(
                 onPressed: () {
@@ -93,8 +93,8 @@ class ChatBubble extends StatelessWidget {
     showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: Text('Block User'),
-          content: Text('Are you sure you want to block this user?'),
+          title: Text('Block User', style: TextStyle(color: Theme.of(context).colorScheme.primary)),
+          content: Text('Are you sure you want to block this user?', style: TextStyle(color: Theme.of(context).colorScheme.primary)),
           actions: [
             TextButton(
                 onPressed: () {
@@ -105,6 +105,7 @@ class ChatBubble extends StatelessWidget {
             TextButton(
                 onPressed: () {
                   ChatService().blockUser(userId);
+                  Navigator.pop(context);
                   Navigator.pop(context);
                   ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(

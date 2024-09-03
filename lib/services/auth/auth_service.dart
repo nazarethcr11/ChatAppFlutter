@@ -45,5 +45,13 @@ class AuthService{
   Future<void> signOut() async{
     await _auth.signOut();
   }
-  //error handling
+  //delete account
+  Future<void> deleteAccount() async{
+    //firebase firestore delete user and chat room
+    await _firestore.collection('ChatRooms').doc(_auth.currentUser!.uid).delete();
+    await _firestore.collection('Users').doc(_auth.currentUser!.uid).delete();
+    //firebase auth delete
+    await _auth.currentUser!.delete();
+    await _auth.signOut();
+  }
 }

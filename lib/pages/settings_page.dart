@@ -1,11 +1,14 @@
 import 'package:chat_app/pages/blocked_users_page.dart';
+import 'package:chat_app/services/auth/auth_service.dart';
 import 'package:chat_app/themes/theme_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class SettingsPage extends StatelessWidget {
-  const SettingsPage({Key? key}) : super(key: key);
+   SettingsPage({Key? key}) : super(key: key);
+
+  final AuthService _authService = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -62,6 +65,54 @@ class SettingsPage extends StatelessWidget {
                         onPressed: ()=>Navigator.push(context, MaterialPageRoute(builder: (context)=> BlockedUsersPage())),
                         icon: Icon(Icons.arrow_forward_ios, color: Theme.of(context).colorScheme.primary,)
                     )
+                  ],
+                ),
+              ),
+              //delete account
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.redAccent,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                padding: const EdgeInsets.all(20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text("Delete Account", style: TextStyle(color: Theme.of(context).colorScheme.secondary, fontSize: 20),),
+                    //button to delete account
+                    IconButton(
+                        onPressed: (){
+                    //show dialog to confirm account deletion
+                          showDialog(
+                              context: context,
+                              builder: (context){
+                                return AlertDialog(
+                                  title: Text("Delete Account", style: TextStyle(color: Theme.of(context).colorScheme.primary),),
+                                  content: Text("Are you sure you want to delete your account?", style: TextStyle(color: Theme.of(context).colorScheme.primary)),
+                                  actions: [
+                                    TextButton(
+                                        onPressed: ()=>Navigator.pop(context),
+                                        child: Text("Cancel", style: TextStyle(color: Theme.of(context).colorScheme.primary))
+                                    ),
+                                    TextButton(
+                                        onPressed: (){
+                                          //delete account
+                                          _authService.deleteAccount();
+                                          //return to login page
+                                          Navigator.pop(context);
+                                          Navigator.pop(context);
+                                        },
+                                        child: Text("Delete", style: TextStyle(color: Theme.of(context).colorScheme.primary))
+                                    )
+                                  ],
+                                );
+                              }
+                          );
+                        },
+                        icon: Icon(Icons.arrow_forward_ios, color: Theme.of(context).colorScheme.secondary,)
+                    )
+
                   ],
                 ),
               ),
