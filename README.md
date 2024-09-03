@@ -11,16 +11,23 @@ La aplicación soporta dos temas visuales para mejorar la experiencia del usuari
 La seguridad y privacidad de los usuarios son primordiales. La aplicación incluye las siguientes opciones de autenticación:
 - Inicio de sesión con correo electrónico: Permite a los usuarios ingresar con su dirección de correo electrónico y contraseña.
 - Registro con correo electrónico: Los nuevos usuarios pueden crear una cuenta proporcionando un correo electrónico y una contraseña.
+  ![auth](https://github.com/user-attachments/assets/febabde4-483f-4858-9932-74ad72d7a9c7)
+
 ### **Funcionalidad de Chat**
 Para facilitar la comunicación, la aplicación incluye funcionalidades de chat en tiempo real:
 
 - Enviar mensajes: Los usuarios pueden enviar mensajes instantáneamente a otros usuarios en la plataforma.
 - Recibir mensajes: Los usuarios reciben mensajes de otros usuarios en tiempo real.
+  ![Funcionalidad](https://github.com/user-attachments/assets/09051212-1b36-4bbb-afe4-c5c1182bb750)
+
 ### **Cuenta de Usuario**
 La aplicación ofrece varias herramientas para gestionar y personalizar la experiencia del usuario:
 
 - Bloquear y reportar usuarios: Los usuarios pueden bloquear o reportar a otros usuarios en caso de comportamientos inapropiados.
 - Eliminar cuenta: Los usuarios tienen la opción de eliminar su cuenta de forma permanente si así lo desean.
+![Cuenta](https://github.com/user-attachments/assets/3105bc13-19bf-44cf-8127-998492c32e91)
+![Cuenta2](https://github.com/user-attachments/assets/ad0c4932-4324-46d9-9ae1-3fd480f69045)
+
 ### **Mejoras Futuras**
 Para mejorar la funcionalidad y experiencia del usuario, se están considerando las siguientes características:
 
