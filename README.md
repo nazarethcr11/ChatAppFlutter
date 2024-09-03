@@ -5,8 +5,13 @@ Este proyecto es una aplicación que proporciona una plataforma de comunicación
 
 ### **Themes**
 La aplicación soporta dos temas visuales para mejorar la experiencia del usuario:
+<<<<<<< HEAD
 - Modo Claro: Un tema con colores brillantes y claros, ideal para ambientes bien iluminados.
 - Modo Oscuro: Un tema con colores oscuros, diseñado para ambientes con poca luz o para usuarios que prefieren interfaces con menos brillo.
+=======
+  - Modo Claro: Un tema con colores brillantes y claros, ideal para ambientes bien iluminados.
+  - Modo Oscuro: Un tema con colores oscuros, diseñado para ambientes con poca luz o para usuarios que prefieren interfaces con menos brillo.
+>>>>>>> 1a52bd1e059e16937918e1778e9ba6a895104cd1
 ### **Autenticación**
 La seguridad y privacidad de los usuarios son primordiales. La aplicación incluye las siguientes opciones de autenticación:
 
@@ -31,7 +36,11 @@ Para mejorar la funcionalidad y experiencia del usuario, se están considerando 
 
 ## Getting Started
 ### **Video tutorial**
+<<<<<<< HEAD
 - Para una guía visual detallada de los pasos de configuración del proyecto, consulta el siguiente video: https://youtu.be/KGpmUqhtrkI?si=f9V8Svmyrh2mpDSY
+=======
+  - Para una guía visual detallada de los pasos de configuración del proyecto, consulta el siguiente video: https://youtu.be/KGpmUqhtrkI?si=f9V8Svmyrh2mpDSY
+>>>>>>> 1a52bd1e059e16937918e1778e9ba6a895104cd1
 
 ### **Obtencion de Dependencias**
 ```
@@ -43,6 +52,7 @@ Para mejorar la funcionalidad y experiencia del usuario, se están considerando 
 Para utilizar Firebase en este proyecto, es necesario configurar Firebase siguiendo estos pasos:
 
 1. Crear un proyecto de Firebase
+<<<<<<< HEAD
 - 1.1. Accede a la consola de Firebase.
 - 1.2. Haz clic en "Agregar proyecto" y sigue las instrucciones para crear un nuevo proyecto de Firebase:
     + Ingresa un nombre para tu proyecto.
@@ -76,3 +86,38 @@ Para utilizar Firebase en este proyecto, es necesario configurar Firebase siguie
 - 4.3. Cambia las reglas de Firestore para permitir el acceso de lectura y escritura (solo para desarrollo): Cambia las reglas false a true para pruebas iniciales.
 > [!TIP]
 > No olvides configurar reglas más estrictas para producción.
+=======
+  - 1.1. Accede a la consola de Firebase.
+  - 1.2. Haz clic en "Agregar proyecto" y sigue las instrucciones para crear un nuevo proyecto de Firebase:
+      + Ingresa un nombre para tu proyecto.
+      + Decide si deseas habilitar Google Analytics para tu proyecto.
+2. Agregar Firebase a la aplicación
+  - 2.1. Instala las herramientas de Firebase en tu máquina:
+  ```
+  npm install -g firebase-tools
+  ```
+  - 2.2. Inicia sesión en Firebase desde la terminal:
+  ```
+  firebase login
+  ```
+  - 2.3. Configura Firebase para tu aplicación Flutter:
+  ```
+  flutterfire configure
+  ```
+  > [!NOTE]
+  > Durante la configuración:
+  > - Elige el proyecto que creaste en Firebase.
+  > - Selecciona Android como plataforma.
+  > - Para el package name, utiliza el namespace de tu aplicación.
+    
+3. Configurar Authentication en Firebase
+  - 3.1. En el panel de control de Firebase, navega a Authentication.
+  - 3.2. Haz clic en "Comenzar" y activa el método de autenticación por Correo electrónico y contraseña.
+
+4. Configurar Cloud Firestore en Firebase
+  - 4.1. En el panel de control de Firebase, navega a Cloud Firestore.
+  - 4.2. Haz clic en "Crear base de datos" y selecciona el modo de producción o prueba según tus necesidades.
+  - 4.3. Cambia las reglas de Firestore para permitir el acceso de lectura y escritura (solo para desarrollo): Cambia las reglas false a true para pruebas iniciales.
+  > [!TIP]
+  > No olvides configurar reglas más estrictas para producción.
+>>>>>>> 1a52bd1e059e16937918e1778e9ba6a895104cd1
