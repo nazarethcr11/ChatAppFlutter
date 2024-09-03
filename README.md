@@ -26,9 +26,9 @@ Para utilizar Firebase en este proyecto, es necesario configurar Firebase siguie
   flutterfire configure
   ```
   Durante la configuración:
-    + Elige el proyecto que creaste en Firebase.
-    + Selecciona Android como plataforma.
-    + Para el package name, utiliza el namespace de tu aplicación.
+    - Elige el proyecto que creaste en Firebase.
+    - Selecciona Android como plataforma.
+    - Para el package name, utiliza el namespace de tu aplicación.
     
 3. Configurar Authentication en Firebase
   - 3.1. En el panel de control de Firebase, navega a Authentication.
@@ -37,8 +37,9 @@ Para utilizar Firebase en este proyecto, es necesario configurar Firebase siguie
 4. Configurar Cloud Firestore en Firebase
   - 4.1. En el panel de control de Firebase, navega a Cloud Firestore.
   - 4.2. Haz clic en "Crear base de datos" y selecciona el modo de producción o prueba según tus necesidades.
-  - 4.3. Cambia las reglas de Firestore para permitir el acceso de lectura y escritura (solo para desarrollo):
-  Cambia las reglas false a true para pruebas iniciales. Nota: No olvides configurar reglas más estrictas para producción.
+  - 4.3. Cambia las reglas de Firestore para permitir el acceso de lectura y escritura (solo para desarrollo): Cambia las reglas false a true para pruebas iniciales.
+  > [!NOTE]
+  > No olvides configurar reglas más estrictas para producción.
 
 5. Video tutorial
   - Para una guía visual detallada de estos pasos, consulta el siguiente video: Configuración de Firebase.
